@@ -10,10 +10,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("../app"));
 const debug_1 = __importDefault(require("debug"));
 const http_1 = __importDefault(require("http"));
+const dotenv_1 = __importDefault(require("dotenv"));
 /**
  * Get port from environment and store in Express.
  */
-const portNumber = normalizePort(process.env.PORT || '3000');
+dotenv_1.default.config();
+const portNumber = process.env.SERVER_PORT;
 app_1.default.set('port', portNumber);
 /**
  * Create HTTP server.

@@ -9,7 +9,7 @@ router.get(
     res: express.Response,
     next: express.NextFunction
   ) => {
-    res.render("index", { title: "Sample Ad" });
+    res.render("index", { title: "Statistics!" });
   }
 );
 

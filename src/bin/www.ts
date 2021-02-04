@@ -7,12 +7,14 @@
 import app from "../app";
 import debug from 'debug';
 import http from 'http';
+import dotenv from "dotenv";
 
 /**
  * Get port from environment and store in Express.
  */
+dotenv.config();
 
-const portNumber = normalizePort(process.env.PORT || '3000');
+const portNumber = process.env.SERVER_PORT;
 app.set('port', portNumber);
 
 /**

@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 /* GET home page. */
 router.get("/", (req, res, next) => {
-    res.render("index", { title: "Sample Ad" });
+    res.render("index", { title: "Statistics!" });
 });
 exports.default = router;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=statistics.js.map
