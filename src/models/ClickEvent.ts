@@ -1,10 +1,16 @@
-import mongoose from "mongoose";
+import { Mode } from "fs";
+import { Schema, model, Document, Model } from "mongoose";
 
-const clickRateSchema = new mongoose.Schema({
+interface IClickRate extends Document {
+  time: Date;
+  ip: string;
+}
+
+const clickRateSchema = new Schema({
   time: Date,
   ip: String,
 });
 
-const clickRateModel = mongoose.model("ClickRateModel", clickRateSchema);
+const clickRateModel: Model<IClickRate> = model("ClickRateModel", clickRateSchema);
 
 export default clickRateModel;
