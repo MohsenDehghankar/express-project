@@ -5,11 +5,12 @@ block content
     br
     br
     br
-    h3 IP addresses ( #{ips.length} )
-    ul
-        each val in ips 
-            li= val
-    h3 Times ( #{times.length} )
-    ul
-        each val in times
-            li= val
+    h3 Times and IP addresses ( #{ips.length} )
+    - var a = 0;
+    ul 
+        while a < ips.length
+            span= ips[a] 
+            span ---------------------
+            span= times[a++]
+            br
+            br
